@@ -49,6 +49,7 @@ alias ln='ln -i'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
+alias sudo='sudo ' # Expand aliases with sudo too
 
 # Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
