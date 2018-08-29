@@ -40,6 +40,7 @@ alias diff='colordiff'
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias du='du -hc'
+alias nvim='vim' # I don't want to install neovim, but I keep writing nvim instead of vim
 
 # Security
 alias rm='rm -i --preserve-root'
