@@ -75,6 +75,7 @@ export HISTFILESIZE=10000
 export HISTCONTROL="ignoreboth"
 export EDITOR="vim"
 export PAGER="less"
+export LESS="-R"
 
 # Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
