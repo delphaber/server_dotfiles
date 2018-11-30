@@ -21,12 +21,6 @@ function is_vim_running {
   jobs | grep -o 'vim' &> /dev/null
 }
 
-PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${RED}\h${WHITE})${NC} ${BLUE}\w"
-PROMPT_RUBY="[\$(rbenv version-name)]"
-PROMPT_FOOTER="\n\$(is_vim_running && echo \"${RED}\" || echo \"${WHITE}\") -> ${GREEN}\$ ${NC}"
-
-PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_FOOTER}"
-
 # Aliases
 alias l='ls -CF'
 alias ls='ls -hF --color=auto'
@@ -77,5 +71,17 @@ export PAGER="less"
 export LESS="-R"
 
 # Rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -s "${HOME}/.rbenv/bin" ]; then
+  PROMPT_RUBY="[\$(rbenv version-name)]"
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${RED}\h${WHITE})${NC} ${BLUE}\w"
+PROMPT_FOOTER="\n\$(is_vim_running && echo \"${RED}\" || echo \"${WHITE}\") -> ${GREEN}\$ ${NC}"
+
+if [ -n "$PROMPT_RUBY" ]; then
+  PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_FOOTER}"
+else
+  PS1="\n${PROMPT_INFO} ${PROMPT_FOOTER}"
+fi
