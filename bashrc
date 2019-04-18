@@ -70,9 +70,8 @@ export EDITOR="vim"
 export PAGER="less"
 export LESS="-R"
 
-# Rbenv
-if [ -s "${HOME}/.rbenv/bin" ]; then
-  PROMPT_RUBY="[\$(rbenv version-name)]"
+# Load Rbenv if it is not already load and if it present
+if [ "$(type -t rbenv)" != "function" ] && [ -s "${HOME}/.rbenv/bin" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
@@ -80,8 +79,4 @@ fi
 PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${RED}\h${WHITE})${NC} ${BLUE}\w"
 PROMPT_FOOTER="\n\$(is_vim_running && echo \"${RED}\" || echo \"${WHITE}\") -> ${GREEN}\$ ${NC}"
 
-if [ -n "$PROMPT_RUBY" ]; then
-  PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_FOOTER}"
-else
-  PS1="\n${PROMPT_INFO} ${PROMPT_FOOTER}"
-fi
+PS1="\n${PROMPT_INFO} ${PROMPT_FOOTER}"
