@@ -10,6 +10,7 @@ gemrc
 gitconfig
 gitignore_global
 inputrc
+irbrc
 )
 
 function warn() {
