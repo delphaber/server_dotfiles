@@ -4,13 +4,14 @@ DOTFILES_DIR=".dotfiles"
 BACKUP_DIR="backup"
 DOTFILES=(
 ackrc
-bashrc
 bash_profile
+bashrc
 gemrc
 gitconfig
 gitignore_global
 inputrc
 irbrc
+psqlrc
 )
 
 function warn() {

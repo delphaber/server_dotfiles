@@ -3,7 +3,7 @@ weLaika's server dotfiles
 
 ## Installation:
 
-Prerequisites: git, rbenv, colordiff, most, vim
+Prerequisites: git, rbenv, vim, pspg
 
 1. Clone into ".dotfiles":  
    `git clone https://github.com/welaika/server_dotfiles.git ~/.dotfiles`
