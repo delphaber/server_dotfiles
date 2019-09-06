@@ -3,7 +3,7 @@
 DOTFILES_DIR=".dotfiles"
 BACKUP_DIR="backup"
 DOTFILES=(
-ackrc
+agignore
 bash_profile
 bashrc
 gemrc
