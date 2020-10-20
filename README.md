@@ -3,7 +3,7 @@ Generic server dotfiles
 
 ## Installation:
 
-Prerequisites: git, vim
+Prerequisites: git, vim, silversearcher-ag:
 
 1. Clone into ".dotfiles":  
    `git clone https://github.com/delphaber/server_dotfiles.git ~/.dotfiles`

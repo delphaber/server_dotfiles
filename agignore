@@ -1,8 +1,1 @@
-log/
-tags/
-tmp/
 .git/
-.node_modules/
-public/assets/
-public/packs/
-public/spree/
