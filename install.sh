@@ -9,7 +9,6 @@ bashrc
 gitconfig
 gitignore_global
 inputrc
-psqlrc
 )
 
 function warn() {

@@ -3,7 +3,7 @@ weLaika's server dotfiles
 
 ## Installation:
 
-Prerequisites: git, vim, pspg (if you use postgres)
+Prerequisites: git, vim
 
 1. Clone into ".dotfiles":  
    `git clone https://github.com/welaika/server_dotfiles.git ~/.dotfiles`
