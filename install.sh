@@ -6,11 +6,9 @@ DOTFILES=(
 agignore
 bash_profile
 bashrc
-gemrc
 gitconfig
 gitignore_global
 inputrc
-irbrc
 psqlrc
 )
 
