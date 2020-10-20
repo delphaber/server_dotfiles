@@ -1,4 +1,4 @@
-weLaika's server dotfiles
+Generic server dotfiles
 ===============================
 
 ## Installation:
@@ -6,7 +6,7 @@ weLaika's server dotfiles
 Prerequisites: git, vim
 
 1. Clone into ".dotfiles":  
-   `git clone https://github.com/welaika/server_dotfiles.git ~/.dotfiles`
+   `git clone https://github.com/delphaber/server_dotfiles.git ~/.dotfiles`
 3. Install:  
    `cd ~/.dotfiles && bash install.sh`
 4. Update `[user]` section in `gitconfig` file
