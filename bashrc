@@ -1,4 +1,4 @@
-# Prompt colors
+## Fancy prompt
 red='\[\e[0;31m\]'
 RED='\[\e[1;31m\]'
 blue='\[\e[0;34m\]'
@@ -44,15 +44,19 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 alias sudo='sudo ' # Expand aliases with sudo too
 
-# Shopt options
+## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
 shopt -s checkwinsize   # Check window size (rows, columns) after each command.
 shopt -s cmdhist        # Save multi-line commands in history as single line.
+shopt -s direxpand      # Allow to type partial directory names..
+shopt -s dirspell       # ..and let bash spell them out for you.
 shopt -s dotglob        # Include dotfile in path-name expansions.
+shopt -s globstar       # Enable recursive globbing with **.
 shopt -s histappend     # Append to history rather than overwrite.
 shopt -s nocaseglob     # Pathname expansion will be treated as case-insensitive.
+stty -ixon              # Disable console start/stop: makes ^S and ^Q go through
 
-# Bash completion
+# Bash completion (must install bash-completion package)
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -69,7 +73,11 @@ export EDITOR="vim"
 export PAGER="less"
 export LESS="-R"
 
-PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${RED}\h${WHITE})${NC} ${BLUE}\w"
-PROMPT_FOOTER="\n\$(is_vim_running && echo \"${RED}\" || echo \"${WHITE}\") -> ${GREEN}\$ ${NC}"
+PROMPT_INFO="${white}[\A] ${red}\u${white}:${blue}\w"
+PROMPT_GIT="${green}\$(__git_ps1)"
+PROMPT_SUFFIX="${NC}\$ "
 
-PS1="\n${PROMPT_INFO} ${PROMPT_FOOTER}"
+PS1="${PROMPT_INFO}${PROMPT_GIT} ${PROMPT_SUFFIX}"
+
+[ -f ~/.dotfiles/functions ] && source ~/.dotfiles/functions
+

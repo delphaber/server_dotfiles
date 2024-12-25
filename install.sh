@@ -3,12 +3,12 @@
 DOTFILES_DIR=".dotfiles"
 BACKUP_DIR="backup"
 DOTFILES=(
-agignore
 bash_profile
 bashrc
 gitconfig
-gitignore_global
 inputrc
+rgignore
+vimrc
 )
 
 function warn() {
@@ -24,6 +24,18 @@ function link(){
       ln -s ${DOTFILES_DIR}/$script $dotfile
     fi
   done
+}
+
+function install_vim() {
+  VIM_DIR="$HOME/${DOTFILES_DIR}"
+  VUNDLE_DIR="${VIM_DIR}/bundle/Vundle.vim"
+  VIMRC_PATH="${HOME}/.vimrc"
+
+  if [ ! -d "$VUNDLE_DIR" ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git "$VUNDLE_DIR"
+  fi
+
+  echo "Open vim and run :PluginInstall"
 }
 
 function backup(){
@@ -48,5 +60,6 @@ function backup_dir(){
 backup_dir
 backup
 link
+install_vim
 
 ############################################
