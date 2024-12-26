@@ -87,7 +87,7 @@
   autostash = true
 
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 
 [interactive]
   diffFilter = delta --color-only
