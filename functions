@@ -36,3 +36,7 @@ function recent {
   LIMIT="${1:-15}"
   ls -lArt | tail -n "$LIMIT"
 }
+
+function ports {
+  sudo ss -lntup
+}
