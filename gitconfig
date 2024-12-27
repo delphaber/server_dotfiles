@@ -72,7 +72,6 @@
 
 [core]
   editor = vim
-  pager = delta
 
 [diff]
   colorMoved = default
@@ -88,13 +87,6 @@
 
 [merge]
   conflictstyle = zdiff3
-
-[interactive]
-  diffFilter = delta --color-only
-
-[delta]
-  navigate = true # use n and N to move between diff sections
-  line-numbers = true
 
 [init]
   defaultBranch = main

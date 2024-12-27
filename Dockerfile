@@ -6,8 +6,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install dotfiles prerequisites
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    git git-delta git-extras less vim \
-    bash bash-completion ripgrep  \
+    git git-extras less vim \
+    bash bash-completion ripgrep \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
