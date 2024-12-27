@@ -8,6 +8,7 @@ bashrc
 gitconfig
 inputrc
 rgignore
+tmux.conf
 vimrc
 )
 
