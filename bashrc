@@ -72,6 +72,7 @@ export HISTCONTROL="ignoreboth"
 export EDITOR="vim"
 export PAGER="less"
 export LESS="-R"
+export TERM="xterm-256color"
 
 PROMPT_INFO="${white}[\A] ${red}\u${white}:${blue}\w"
 PROMPT_GIT="${green}\$(__git_ps1)"
