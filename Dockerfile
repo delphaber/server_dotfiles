@@ -6,7 +6,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install dotfiles prerequisites
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    git git-extras less vim \
+    git git-extras less vim bat \
     bash bash-completion ripgrep tmux \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
