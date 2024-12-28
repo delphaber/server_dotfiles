@@ -74,7 +74,7 @@ export PAGER="less"
 export LESS="-R"
 export TERM="xterm-256color"
 
-PROMPT_INFO="${white}[\A] ${red}\u${white}:${blue}\w"
+PROMPT_INFO="${white}[\A] ${blue}\u${NC}@${red}\h${NC}:${blue}\w"
 PROMPT_GIT="${green}\$(__git_ps1)"
 PROMPT_SUFFIX="${NC}\$ "
 
