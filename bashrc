@@ -75,6 +75,10 @@ export PAGER="less"
 export LESS="-R"
 export TERM="xterm-256color"
 
+# Limits
+# https://grafana.com/docs/k6/latest/set-up/fine-tune-os/
+ulimit -n 5000
+
 PROMPT_INFO="${white}[\A] ${blue}\u${NC}@${red}\h${NC}:${blue}\w"
 PROMPT_GIT="${green}\$(__git_ps1)"
 PROMPT_SUFFIX="${NC}\$ "
